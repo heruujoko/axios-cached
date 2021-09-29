@@ -20,5 +20,10 @@ describe("cache utility", () => {
             const cacheKey = getCacheKey('/users');
             expect(cacheKey).toEqual(`${baseURL}/users`);
         });
+
+        it("should return same url if there is no mapped config provided (diffrent url segment)", () => {
+            const cacheKey = getCacheKey('/posts/1/history');
+            expect(cacheKey).toEqual(`${baseURL}/posts/1/history`);
+        });
     });
 });
