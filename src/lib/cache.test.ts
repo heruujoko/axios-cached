@@ -2,7 +2,7 @@ import { getCacheKey, setBaseUrl } from "./cache";
 
 describe("cache utility", () => {
     describe("getCacheKey", () => {
-        const baseURL = "https://dummy-api.grab.com"; 
+        const baseURL = "https://dummy-api.com"; 
         beforeEach(() => {
             setBaseUrl(baseURL);
         });
